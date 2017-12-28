@@ -49,6 +49,9 @@ class PromiseRender extends React.PureComponent {
  * @returns bolean
  */
 const decideStringRole = (role) => {
+  if (ROLE === 'ALL') {
+    return true;
+  }
   if (role.includes('!')) {
     const myrole = role.substr(1, role.length - 1);
     return myrole !== ROLE;
