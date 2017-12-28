@@ -111,7 +111,7 @@ const Authorize = (role, error) => {
  * @param {string|()=>String} getRole
  */
 const renderAuthorize = (role) => {
-  if (!role) {
+  if (role) {
     if (role.constructor.name === 'Function') {
       ROLE = role();
     }
